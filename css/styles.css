@@ -1,0 +1,734 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  list-style: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  color: #fff;
+  background: #1f2641;
+}
+
+.window-scroll {
+  background: #6c63ff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.heading {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+section {
+  padding: 0 8rem;
+}
+
+footer {
+  padding: 0 8rem;
+}
+
+a {
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: all 400ms ease;
+}
+.btn:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-primary {
+  background: #f75842;
+  color: #fff;
+}
+
+.top-space {
+  margin-top: 5rem !important;
+}
+
+#open-menu-btn {
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  border-radius: 3px;
+  color: #424890;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+.header nav .menu li {
+  display: inline-block;
+  margin-left: 3rem;
+}
+.header nav .menu li a {
+  color: #fff;
+}
+.header nav .menu li a:hover {
+  color: #424890;
+}
+.header button {
+  display: none;
+}
+
+.home {
+  margin-top: 5rem;
+}
+.home .container {
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.home .container .left {
+  flex: 1 1 18rem;
+}
+.home .container .left h1 {
+  margin-bottom: 0.7rem;
+  line-height: 1.4;
+}
+.home .container .left p {
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  font-size: 0.8rem;
+}
+.home .container .right {
+  flex: 1 1 18rem;
+}
+
+.categories {
+  background: #2e3267;
+}
+.categories .container {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.categories .container .left {
+  flex: 1 1 13rem;
+}
+.categories .container .left h1 {
+  margin-bottom: 1rem;
+}
+.categories .container .left p {
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-size: 0.8rem;
+}
+.categories .container .right {
+  flex: 1 1 25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.categories .container .right .category-item:nth-child(2) span {
+  background: #00bf8e;
+}
+.categories .container .right .category-item:nth-child(3) span {
+  background: #f75842;
+}
+.categories .container .right .category-item:nth-child(4) span {
+  background: #f75842;
+}
+.categories .container .right .category-item:nth-child(5) span {
+  background: #00bf8e;
+}
+.categories .container .right .category-item:nth-child(6) span {
+  background: #f7c94b;
+}
+.categories .container .right .category-item {
+  background: #424890;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.categories .container .right .category-item span {
+  background: #6c63ff;
+  padding: 0.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+.categories .container .right .category-item span i {
+  margin: 10px 0;
+}
+.categories .container .right .category-item p {
+  font-size: 0.6rem;
+}
+
+.courses {
+  margin-bottom: 2rem;
+}
+.courses .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.courses .container .course {
+  text-align: center;
+  background: #2e3267;
+  border: 1px solid transparent;
+}
+.courses .container .course:hover {
+  background: transparent;
+  border-color: #6c63ff;
+}
+.courses .container .course .info {
+  padding: 1.5rem;
+}
+.courses .container .course .info h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.courses .container .course .info p {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.questions {
+  background: #2e3267;
+  padding-bottom: 2rem;
+}
+.questions .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.questions .container .question {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #6c63ff;
+  cursor: pointer;
+}
+.questions .container .question i {
+  align-self: flex-start;
+  font-size: 1.2rem;
+  line-height: 2.2;
+}
+.questions .container .question .answer h4 {
+  font-size: 1rem;
+  line-height: 2.2;
+}
+.questions .container .question .answer p {
+  margin-top: 0.8rem;
+  display: none;
+}
+.questions .container .question.open .answer p {
+  display: block;
+}
+
+.testimonials .container {
+  position: relative;
+}
+.testimonials .container .testimonial {
+  margin-bottom: 2rem;
+}
+.testimonials .container .testimonial .avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  border: 1rem solid #2e3267;
+}
+.testimonials .container .testimonial .info {
+  text-align: center;
+}
+.testimonials .container .testimonial .content {
+  background: #6c63ff;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}
+
+.footer {
+  background: #2e3267;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 -1rem 2rem rgba(0, 0, 0, 0.3);
+}
+.footer ul li {
+  margin-bottom: 0.7rem;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+.footer .container > div h4 {
+  margin-bottom: 1.5rem;
+}
+.footer .container .footer-4 div span {
+  display: block;
+}
+.footer .container .footer-4 .social-media {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.footer .copyright {
+  text-align: center;
+}
+.footer .copyright span {
+  background: #6c63ff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.achievements {
+  margin-top: 5rem;
+}
+.achievements .container {
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.achievements .container .left {
+  flex: 1 1 15rem;
+}
+.achievements .container .right {
+  flex: 1 1 21rem;
+}
+.achievements .container .right h1 {
+  margin-bottom: 1.5rem;
+}
+.achievements .container .right > p {
+  margin-bottom: 1rem;
+}
+.achievements .container .right .cards {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+}
+.achievements .container .right .cards .card {
+  padding: 1rem;
+  background: #424890;
+  border-radius: 5px;
+}
+.achievements .container .right .cards .card i {
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  background: #00bf8e;
+}
+.achievements .container .right .cards :nth-child(2) i {
+  background: #f75842;
+}
+.achievements .container .right .cards :nth-child(3) i {
+  background: #f7c94b;
+}
+
+.team {
+  background: #2e3267;
+  padding-bottom: 2rem;
+}
+.team .container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team .container .member {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #424890;
+  border: 1px solid #424890;
+  overflow: hidden;
+}
+.team .container .member .info {
+  text-align: center;
+}
+.team .container .member img {
+  width: 150px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.team .container .member:hover {
+  background: transparent;
+}
+.team .container .member:hover .social-media {
+  right: 0;
+}
+.team .container .member .social-media {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #630ce5;
+  border-radius: 5px 0 0 5px;
+}
+.team .container .member .social-media a {
+  padding: 0.3rem 0.5rem;
+}
+.team .container .member .social-media a:hover {
+  background: #3f0794;
+}
+
+.contact {
+  margin: 8rem 0 0;
+}
+.contact .container {
+  background: #2e3267;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 4rem;
+  margin: 10rem auto;
+  border-radius: 1rem;
+  height: 30rem;
+}
+.contact .container .aside {
+  background: #6c63ff;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  bottom: 8rem;
+}
+.contact .container .aside img {
+  width: 12rem;
+  margin-bottom: 1rem;
+}
+.contact .container .aside h2 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.contact .container .aside p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.contact .container .aside .details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.contact .container .aside .details li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contact .container .aside .social-media {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+.contact .container .aside .social-media a i {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  background: #424890;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.contact .container .aside .social-media a:hover {
+  background: transparent;
+}
+.contact .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-right: 4rem;
+}
+.contact .container form .names {
+  display: flex;
+  gap: 1rem;
+}
+.contact .container form .names input[type=text] {
+  width: 50%;
+}
+.contact .container form input,
+.contact .container form textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #1f2641;
+  color: #fff;
+}
+.contact .container form .btn {
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 0 6rem;
+  }
+  footer {
+    padding: 0 6rem;
+  }
+  .header {
+    padding: 20px 6rem;
+  }
+  .contact .container {
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    height: auto;
+  }
+  .contact .container .aside {
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+  }
+  .contact .container form {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  section {
+    padding: 0 4rem;
+  }
+  footer {
+    padding: 0 4rem;
+  }
+  .header {
+    padding: 20px 4rem;
+  }
+  .btn {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+  }
+  .courses .container .course .info {
+    padding: 1rem;
+  }
+  .testimonials .container .testimonial .content p {
+    font-size: 0.8rem;
+  }
+  .footer {
+    padding-top: 2rem;
+  }
+  .footer .container {
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  section {
+    padding: 0 2rem;
+  }
+  footer {
+    padding: 0 2rem;
+  }
+  .header {
+    padding: 20px 2rem;
+  }
+  .header nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #424890;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header nav.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header nav .menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 0;
+  }
+  .header nav .menu li:hover {
+    background: #fff;
+  }
+  .header nav .menu li:hover a {
+    color: #424890;
+  }
+  .header #open-menu-btn {
+    display: inline-block;
+  }
+  .courses .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .questions .container {
+    grid-template-columns: 1fr;
+  }
+  .questions .container .question {
+    padding: 1rem;
+  }
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0;
+  }
+  .contact .container form {
+    margin: 0 1.5rem 3rem;
+  }
+  .contact .container form .names {
+    flex-direction: column;
+  }
+  .contact .container form .names input[type=text] {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  section {
+    padding: 0 1rem;
+  }
+  footer {
+    padding: 0 1rem;
+  }
+  .header {
+    padding: 10px 1rem;
+  }
+  .heading {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .home {
+    margin-top: 2rem;
+  }
+  .home .container .left {
+    text-align: center;
+  }
+  .home .container .left h1 {
+    font-size: 1rem;
+  }
+  .categories .container .left {
+    text-align: center;
+  }
+  .categories .container .left h1 {
+    font-size: 1rem;
+  }
+  .categories .container .right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .courses .container {
+    grid-template-columns: 1fr;
+  }
+  .questions .container .question {
+    gap: 0.7rem;
+  }
+  .questions .container .question i {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .questions .container .question .answer h4 {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .questions .container .question .answer p {
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+  }
+  .testimonials .container .testimonial .content {
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+  }
+  .footer ul li {
+    margin-bottom: 0.3rem;
+  }
+  .footer .container {
+    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer .container > div h4 {
+    margin-bottom: 0.8rem;
+  }
+  .footer .container .footer-4 .social-media {
+    justify-content: center;
+  }
+  .footer .copyright span {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.1rem 0.3rem;
+  }
+  .achievements .container .right {
+    text-align: center;
+  }
+  .achievements .container .right h1 {
+    margin-bottom: 0.5rem;
+  }
+  .achievements .container .right > p {
+    margin-bottom: 0.5rem;
+  }
+  .achievements .container .right .cards {
+    gap: 0.7rem;
+    justify-content: center;
+  }
+  .achievements .container .right .cards .card {
+    padding: 0.5rem;
+  }
+  .achievements .container .right .cards .card i {
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .achievements .container .right .cards .card h3 {
+    font-size: 1rem;
+  }
+  .achievements .container .right .cards .card p {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
